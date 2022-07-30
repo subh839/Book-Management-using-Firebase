@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Access Individual Elements of an Array</title>
+</head>
+
+<body>
+    <div>
+
+        <p id="city1"></p>
+        <button onclick="myFunction()">Click Me</button>
+        <p id="city2"></p>
+        <button onclick="myFunction()">Click Me</button>
+        <p id="city3"></p>
+        <button onclick="myFunction()">Click Me</button>
+        <p id="city4"></p>
+        <button onclick="myFunction()">Click Me</button>
+        <p id="city5"></p>
+        <button onclick="myFunction()">Click Me</button>
+    </div>
+    <script>
+        var cities = ["Kolkata", "Bangalore", "Mumbai", "Delhi", "Hydrabad"];
+        document.getElementById("city1").innerHTML = cities[0] + "<br>";
+        document.getElementById("city2").innerHTML = cities[1] + "<br>";
+        document.getElementById("city3").innerHTML = cities[2] + "<br>";
+        document.getElementById("city4").innerHTML = cities[3] + "<br>";
+        document.getElementById("city5").innerHTML = cities[cities.length - 1] + "<br>";
+
+        const myFunction = () => {
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  //Math.random() * 16777215 generates no. and  convert into string 
+   document.body.style.backgroundColor = "#" + randomColor;
+  color.innerHTML = "#" + randomColor;
+  // As html colors start with #
+}
+
+
+const arr =[
+  {  "dressname": "shirt", "gender": "male","price": "1000-1500" },
+  {  "dressname": "pant", "gender": "male", "price": "1500-2000"  },
+  { "dressname": "Dhoti","gender": "male","price": "1000-1500" },
+  { "dressname": "tie","gender": "male","price": "above2000" },
+  { "dressname": "western","gender": "female","price": "1000-1500" },
+  { "dressname": "saari","gender": "female","price": "1500-2000" },
+  { "dressname": "salwar", "gender": "female ","price": "2000" }
+
+];
+
+var filtered = arr.filter(function(item) {
+    return item.gender==='male';
+});
+console.log(filtered);
+
+    </script>
+</body>
+
+</html>
